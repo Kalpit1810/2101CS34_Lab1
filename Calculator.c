@@ -3,6 +3,7 @@
 float add(float x,float y);
 float subs(float x,float y);
 float multiply(float x,float y);
+float div(float x,float y);
 
 int main()
 {
@@ -17,10 +18,16 @@ int main()
     printf(" Num2: ");
     scanf("%f", &num2);
 
+    if(op==4 && num2==0){
+        printf("Num2 Cannot be 0.");
+        op=0;
+    }
+
     switch(op){
         case 1: printf("The result is: %f", add(num1,num2));
         case 2: printf("The result is: %f", subs(num1,num2));
         case 3: printf("The result is: %f", multiply(num1,num2));
+        case 4: printf("The result is: %f", div(num1,num2));
     };
 
     return 0;
@@ -38,4 +45,8 @@ float subs(float x,float y){
 
 float multiply(float x,float y){
     return x*y;
+}
+
+float div(float x,float y){
+        return x/y;
 }
