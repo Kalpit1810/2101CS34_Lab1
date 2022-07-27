@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+float add(float x,float y);
+
 int main()
 {
     // creating user interface and taking inputs.
@@ -10,9 +12,17 @@ int main()
     scanf("%d", &op);
     printf("Enter the Numbers:\n Num1: ");
     scanf("%f", &num1);
-    printf("\n Num2: ");
+    printf(" Num2: ");
     scanf("%f", &num2);
 
+    switch(op){
+        case 1: printf("The result is: %d", add(num1,num2));
+    };
+
     return 0;
+}
+
+float add(float x,float y){
+    return x+y;
 }
 
