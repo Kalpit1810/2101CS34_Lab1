@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 float add(float x,float y);
+float subs(float x,float y);
 
 int main()
 {
@@ -16,13 +17,19 @@ int main()
     scanf("%f", &num2);
 
     switch(op){
-        case 1: printf("The result is: %d", add(num1,num2));
+        case 1: printf("The result is: %f", add(num1,num2));
+        case 2: printf("The result is: %f", subs(num1,num2));
     };
 
     return 0;
 }
 
+
 float add(float x,float y){
     return x+y;
 }
 
+
+float subs(float x,float y){
+    return x-y;
+}
