@@ -2,6 +2,7 @@
 
 float add(float x,float y);
 float subs(float x,float y);
+float multiply(float x,float y);
 
 int main()
 {
@@ -19,6 +20,7 @@ int main()
     switch(op){
         case 1: printf("The result is: %f", add(num1,num2));
         case 2: printf("The result is: %f", subs(num1,num2));
+        case 3: printf("The result is: %f", multiply(num1,num2));
     };
 
     return 0;
@@ -32,4 +34,8 @@ float add(float x,float y){
 
 float subs(float x,float y){
     return x-y;
+}
+
+float multiply(float x,float y){
+    return x*y;
 }
